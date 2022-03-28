@@ -5,7 +5,7 @@ async function main() {
     const Token = await hre.ethers.getContractFactory('Hieutk');
     const token = await Token.deploy();
     const [owner] = await hre.ethers.getSigners();
-    console.log('Deploy', await owner.getBalance());
+    console.log('Deploy', await token.resolvedAddress);
 }
 
 main().then(() => {
