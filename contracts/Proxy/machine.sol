@@ -48,7 +48,7 @@ contract Machine {
 const Machine = await ethers.getContractFactory('Machine');
 const machine = await Machine.attach('0xeeB87AcfaA0F42C3C899C761c3e2d1de23d54C0A');
 
-const Cal = await ethers.getContractFactory('Calculator');
-const calculator = await Cal.attach('0xeBa160b4857F93766eF2D1787dA9dCE90F1b8927');
+const Cal = await ethers.getContractFactory('GameNFT');
+const game = await Cal.attach('0x5FbDB2315678afecb367f032d93F642f64180aa3');
 
 */

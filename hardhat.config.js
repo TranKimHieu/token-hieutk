@@ -24,16 +24,19 @@ const ALCHEMY_URL = 'https://eth-rinkeby.alchemyapi.io/v2/0tCm7HqBa08xG6CHyPOFpP
 
 module.exports = {
   solidity: "0.8.4",
-  networks: {
-    hardhat: {
-      forking: {
-        url: ALCHEMY_URL,
-        blockNumber: 10381320
-      }
-    }
+  networks: { 
+
   }
 };
 // rinkeby: {
 //   url: INFURA_URL,
 //   accounts: [secret_token]
 // }
+/*
+    hardhat: { 
+      forking: { 
+        url: ALCHEMY_URL, 
+        blockNumber: 10454209 
+      } 
+    } 
+*/

@@ -3,9 +3,9 @@
 const { ethers, upgrades } = require('hardhat');
 
 async function main() {
-    const Tokenv2 = await ethers.getContractFactory('Mayv2');
-    const token = await upgrades.upgradeProxy('0xb25cafd4b5FCBAE13Cb6d761dA4fdED3bA07008C', Tokenv2);
-    console.log('Deploy may', await token.resolvedAddress);
+    const Tokenv2 = await ethers.getContractFactory('Mamv2');
+    const token = await upgrades.upgradeProxy('0x2Ef3bDE79496880d5D37772C0BD378387433B524', Tokenv2);
+    console.log('Deploy mam', await token.resolvedAddress);
 
     console.log('Upgraded');
 }

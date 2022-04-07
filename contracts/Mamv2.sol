@@ -6,11 +6,11 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 
-contract May is ERC20Upgradeable   {
+contract Mamv2 is ERC20Upgradeable   {
 
-    function initialize() public initializer {
-       __ERC20_init_unchained('My May', 'MAY');
-       _mint(msg.sender, 1000000000000000);
+   function initialize() public initializer {
+       __ERC20_init_unchained('My Mam', 'MAM');
+       _mint(msg.sender, 1000000000000000000);
     }
     
     /**
@@ -27,7 +27,7 @@ contract May is ERC20Upgradeable   {
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view virtual override returns (uint8) {
-        return 12;
+        return 6;
     }
 
 }
