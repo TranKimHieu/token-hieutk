@@ -44,10 +44,10 @@ contract GameMarketplace {
     _;
   }
 
-  function putItemForSale(uint256 tokenId, uint256 price) 
-    OnlyItemOwner(tokenId) 
-    HasTransferApproval(tokenId) 
-    external 
+  function putItemForSale(uint256 tokenId, uint256 price)
+    OnlyItemOwner(tokenId)
+    HasTransferApproval(tokenId)
+    external
     returns (uint256){
       require(!activeItems[tokenId], "Item is already up for sale");
 
@@ -66,11 +66,11 @@ contract GameMarketplace {
       return newItemId;
   }
 
-  function buyItem(uint256 id) 
+  function buyItem(uint256 id)
     ItemExists(id)
     IsForSale(id)
     HasTransferApproval(itemsForSale[id].tokenId)
-    payable 
+    payable
     external {
       require(msg.value >= itemsForSale[id].price, "Not enough funds sent");
       require(msg.sender != itemsForSale[id].seller);
@@ -85,6 +85,10 @@ contract GameMarketplace {
 
   function totalItemsForSale() external view returns(uint256) {
     return itemsForSale.length;
+  }
+
+  function listItemsForSale() external view returns(ItemForSale[] memory) {
+    return itemsForSale;
   }
 }
 
